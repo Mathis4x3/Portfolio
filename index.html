@@ -22,10 +22,34 @@
     </nav>
     <main>
         <div class="arrow left">
-            <img src="img/arrow.png">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#E8D4B8;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#D4C4B0;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <!-- Cercle avec effet ripple -->
+                <circle cx="50" cy="50" r="48" fill="url(#gradient1)" filter="drop-shadow(0 4px 12px rgba(232, 212, 184, 0.3))"/>
+                <!-- Flèche blanche -->
+                <path d="M 58 30 L 38 50 L 58 70" fill="none" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
         </div>
+
+        <!-- Flèche Droite -->
         <div class="arrow right">
-            <img src="img/arrow.png">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#E8D4B8;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#D4C4B0;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <!-- Cercle avec effet ripple -->
+                <circle cx="50" cy="50" r="48" fill="url(#gradient2)" filter="drop-shadow(0 4px 12px rgba(232, 212, 184, 0.3))"/>
+                <!-- Flèche blanche -->
+                <path d="M 42 30 L 62 50 L 42 70" fill="none" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
         </div>
         <section id="menu">
             <div class="container">
@@ -36,7 +60,11 @@
                 <div class="separator"></div>
                 <div class="droite">
                     <p class="titre">Etudiant en Informatique et Agent technique chez E-MSN</p>
-                    <p class="info">erftghj</p>
+                    <p class="info">
+                        Site web en construction... !
+                        <br />
+                        Les projets ainsi que le parcours ne sont pas exactes
+                    </p>
                 </div>
             </div>
         </section>
@@ -97,33 +125,180 @@
                 ghjkl
             </div>
         </section>
+
         <section id="projets">
             <div class="container">
-                ghjkl
+                <p class="titre">Mes Projets</p>
+                <hr>
+
+                <div class="projects-grid">
+
+                    <!-- Projet 1 - Exemple Portfolio -->
+                    <a href="https://gitlab.com/votre-profil/portfolio" class="project-card" target="_blank">
+                        <div class="project-header">
+                            <h3 class="project-title">Portfolio Personnel</h3>
+                            <span class="project-date">Nov 2024</span>
+                        </div>
+
+                        <p class="project-description">
+                            Création d'un portfolio interactif avec navigation par sections, animations fluides et design responsive. Intégration d'EmailJS pour le formulaire de contact.
+                        </p>
+
+                        <div class="project-skills">
+                            <span class="skills-label">Compétences acquises :</span>
+                            <div class="skills-list">
+                                <span class="skill">HTML/CSS</span>
+                                <span class="skill">JavaScript</span>
+                                <span class="skill">Design UX/UI</span>
+                            </div>
+                        </div>
+
+                        <div class="project-tags">
+                            <span class="tag">Web</span>
+                            <span class="tag">Frontend</span>
+                            <span class="tag">Responsive</span>
+                        </div>
+
+                        <svg class="project-link-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+
+                    <!-- Projet 2 - Exemple Application -->
+                    <a href="https://gitlab.com/votre-profil/gestion-taches" class="project-card" target="_blank">
+                        <div class="project-header">
+                            <h3 class="project-title">Gestionnaire de Tâches</h3>
+                            <span class="project-date">Oct 2024</span>
+                        </div>
+
+                        <p class="project-description">
+                            Application web de gestion de tâches avec système de priorités, filtres et stockage local. Interface intuitive avec drag & drop.
+                        </p>
+
+                        <div class="project-skills">
+                            <span class="skills-label">Compétences acquises :</span>
+                            <div class="skills-list">
+                                <span class="skill">React</span>
+                                <span class="skill">LocalStorage</span>
+                                <span class="skill">State Management</span>
+                            </div>
+                        </div>
+
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">SPA</span>
+                            <span class="tag">Productivité</span>
+                        </div>
+
+                        <svg class="project-link-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+
+                    <!-- Projet 3 - Exemple API -->
+                    <a href="https://gitlab.com/votre-profil/api-meteo" class="project-card" target="_blank">
+                        <div class="project-header">
+                            <h3 class="project-title">API Météo</h3>
+                            <span class="project-date">Sep 2024</span>
+                        </div>
+
+                        <p class="project-description">
+                            Développement d'une API REST pour récupérer et traiter des données météorologiques. Documentation Swagger et tests unitaires.
+                        </p>
+
+                        <div class="project-skills">
+                            <span class="skills-label">Compétences acquises :</span>
+                            <div class="skills-list">
+                                <span class="skill">Node.js</span>
+                                <span class="skill">Express</span>
+                                <span class="skill">API REST</span>
+                            </div>
+                        </div>
+
+                        <div class="project-tags">
+                            <span class="tag">Backend</span>
+                            <span class="tag">API</span>
+                            <span class="tag">Node.js</span>
+                        </div>
+
+                        <svg class="project-link-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+
+                    <!-- Vous pouvez ajouter d'autres projets ici avec la même structure -->
+
+                </div>
             </div>
         </section>
+
         <section id="contacts">
             <div class="container">
                 <p class="titre">Contactez-moi</p>
                 <hr>
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Nom</label>
-                        <input type="text" id="name" name="from_name" required placeholder="Votre nom">
+
+                <div class="contact-wrapper">
+                    <!-- Liens sociaux et CV + Bouton envoyer -->
+                    <div class="submit-button-wrapper">
+                        <!-- GitLab -->
+                        <a href="https://gitlab.com/votre-profil" class="contact-link" target="_blank">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.546 10.93L13.667.98a1.56 1.56 0 00-2.604 0L1.184 10.93a1.56 1.56 0 00-.465 1.768l3.58 10.74c.192.576.768.96 1.44.96h12.482c.672 0 1.248-.384 1.44-.96l3.58-10.74a1.56 1.56 0 00-.465-1.768v0z" fill="#E8D4B8"/>
+                                <path d="M12.365 16.704l-4.05-12.48 8.1 0-4.05 12.48z" fill="#D4C4B0"/>
+                            </svg>
+                            <div class="link-content">
+                                <span class="link-title">GitLab</span>
+                                <span class="link-subtitle">Voir mes projets</span>
+                            </div>
+                        </a>
+
+                        <!-- LinkedIn -->
+                        <a href="https://linkedin.com/in/votre-profil" class="contact-link" target="_blank">
+                            <svg class="icon" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                            <div class="link-content">
+                                <span class="link-title">LinkedIn</span>
+                                <span class="link-subtitle">Mon profil pro</span>
+                            </div>
+                        </a>
+
+                        <!-- CV Download -->
+                        <a href="path/to/cv.pdf" class="contact-link" download>
+                            <svg class="icon" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z"/>
+                                <path d="M14 2v6h6M12 18v-6M9 15l3 3 3-3" stroke="#5A5A4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <div class="link-content">
+                                <span class="link-title">Télécharger CV</span>
+                                <span class="link-subtitle">Format PDF</span>
+                            </div>
+                        </a>
+
+                        <!-- Bouton Envoyer -->
+                        <button type="submit" id="submitBtn" form="contactForm" disabled>
+                            Envoyer le message
+                        </button>
                     </div>
 
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="reply_to" required placeholder="votre@email.com">
-                    </div>
+                    <!-- Formulaire de contact -->
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nom</label>
+                            <input type="text" id="name" name="from_name" required placeholder="Votre nom">
+                        </div>
 
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" required placeholder="Votre message..."></textarea>
-                    </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="reply_to" required placeholder="votre@email.com">
+                        </div>
 
-                    <button type="submit" id="submitBtn">Envoyer</button>
-                </form>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required placeholder="Votre message..."></textarea>
+                        </div>
+                    </form>
+                </div>
             </div>
         </section>
     </main>

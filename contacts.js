@@ -32,3 +32,30 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
             setTimeout(function() {status.className = 'status';}, 5000)
         });
 });
+
+const contactForm = document.getElementById('contactForm');
+const submitBtn = document.getElementById('submitBtn');
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const messageInput = document.getElementById('message');
+
+function validateForm() {
+    const nameValid = nameInput.value.trim() !== '';
+    const emailValid = emailInput.value.trim() !== '' && emailInput.validity.valid;
+    const messageValid = messageInput.value.trim() !== '';
+
+    // Active le bouton seulement si tous les champs sont remplis
+    if (nameValid && emailValid && messageValid) {
+        submitBtn.disabled = false;
+    } else {
+        submitBtn.disabled = true;
+    }
+}
+
+// Écoute les changements sur chaque champ
+nameInput.addEventListener('input', validateForm);
+emailInput.addEventListener('input', validateForm);
+messageInput.addEventListener('input', validateForm);
+
+// Validation initiale au chargement
+validateForm();
