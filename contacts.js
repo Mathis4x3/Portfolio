@@ -1,14 +1,15 @@
-emailjs.init("ZLl7-Vqtjxw8walNE"); // ← Remplace ici
+emailjs.init("ZLl7-Vqtjxw8walNE");
 
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
     const btn = document.getElementById('submitBtn');
     const status = document.getElementById('status');
+    const statusText = status.querySelector('.status-text');
 
     btn.disabled = true;
     btn.textContent = 'Envoi en cours...';
-    status.className = 'status';
+    hideStatus();
 
     // Envoie l'email
     emailjs.sendForm(
@@ -17,19 +18,16 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
         this
     )
         .then(function() {
-            status.textContent = '✓ Message envoyé avec succès !';
-            status.className = 'status success';
+            showStatus('✓ Message envoyé avec succès !', 'success');
             document.getElementById('contactForm').reset();
         })
         .catch(function(error) {
-            status.textContent = '✗ Erreur lors de l\'envoi. Réessayez.';
-            status.className = 'status error';
+            showStatus('✗ Erreur lors de l\'envoi. Réessayez.', 'error');
             console.error('Erreur:', error);
         })
         .finally(function() {
             btn.disabled = false;
             btn.textContent = 'Envoyer';
-            setTimeout(function() {status.className = 'status';}, 5000)
         });
 });
 
@@ -59,3 +57,32 @@ messageInput.addEventListener('input', validateForm);
 
 // Validation initiale au chargement
 validateForm();
+
+// Fonctions pour gérer l'affichage du status
+function showStatus(message, type) {
+    const status = document.getElementById('status');
+    const statusText = status.querySelector('.status-text');
+
+    statusText.textContent = message;
+    status.className = 'status ' + type + ' show';
+
+    // Clear le timeout précédent s'il existe
+    if (window.statusTimeout) {
+        clearTimeout(window.statusTimeout);
+    }
+
+    // Masquer automatiquement après 5 secondes
+    window.statusTimeout = setTimeout(hideStatus, 5000);
+}
+
+function hideStatus() {
+    const status = document.getElementById('status');
+    status.classList.remove('show');
+
+    if (window.statusTimeout) {
+        clearTimeout(window.statusTimeout);
+    }
+}
+
+// Gestionnaire pour le bouton de fermeture
+document.querySelector('.status-close').addEventListener('click', hideStatus);
