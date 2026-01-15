@@ -8,15 +8,77 @@
 </head>
 <body>
     <background></background>
+    <div class="overlay"></div>
+
+    <!-- Bouton burger (visible uniquement sur mobile) -->
+    <button class="burger-btn">
+        <div class="burger-icon">
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+        </div>
+    </button>
+
     <nav>
         <div id="navBar">
-            <div class="menu"><p>Menu</p></div>
-            <div class="parcours"><p>Parcours</p></div>
-            <div class="competences"><p>Compétences</p></div>
-            <div class="projets"><p>Projets</p></div>
-            <div class="contacts"><p>Me Contacter</p></div>
+            <button class="menu nav-item active">
+                <p>Menu</p>
+            </button>
+            <button class="parcours nav-item">
+                <p>Parcours</p>
+            </button>
+            <button class="competences nav-item">
+                <p>Compétences</p>
+            </button>
+            <button class="projets nav-item">
+                <p>Projets</p>
+            </button>
+            <button class="contacts nav-item">
+                <p>Contact</p>
+            </button>
         </div>
     </nav>
+
+    <script>
+        const burgerBtn = document.querySelector('.burger-btn');
+        const nav = document.querySelector('nav');
+        const overlay = document.querySelector('.overlay');
+        const navItems = document.querySelectorAll('.nav-item');
+
+        // Toggle menu
+        function toggleMenu() {
+            burgerBtn.classList.toggle('active');
+            nav.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+        }
+
+        // Ouvrir/fermer le menu avec le bouton burger
+        burgerBtn.addEventListener('click', toggleMenu);
+
+        // Gestion des items de navigation
+        navItems.forEach(item => {
+            item.addEventListener('click', function() {
+                // Retirer active de tous les items
+                navItems.forEach(btn => btn.classList.remove('active'));
+
+                // Ajouter active à l'item cliqué
+                this.classList.add('active');
+
+                // Fermer le menu sur mobile après sélection
+                if (window.innerWidth <= 768) {
+                    setTimeout(toggleMenu, 300);
+                }
+            });
+        });
+
+        // Gérer le redimensionnement de la fenêtre
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768 && nav.classList.contains('active')) {
+                toggleMenu();
+            }
+        });
+    </script>
     <main>
         <div class="arrow left">
             <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -71,20 +133,19 @@
                 <p class="titre">Mon Parcours</p>
                 <hr>
                 <div class="timeline">
-
                     <div class="timeline-item">
                         <div class="timeline-content">
-                            <div class="timeline-year">2022</div>
-                            <div class="timeline-title">Baccalauréat</div>
-                            <div class="timeline-desc">Mention Bien - Formation générale complète avec spécialisation scientifique</div>
+                            <div class="timeline-year">2025 - 2026</div>
+                            <div class="timeline-title">Développeur</div>
+                            <div class="timeline-desc">Poste actuel - Création de solutions web innovantes et performantes</div>
                             <div class="timeline-tags">
-                                <span class="tag">Diplôme</span>
-                                <span class="tag">Lycée</span>
+                                <span class="tag">Actuel</span>
+                                <span class="tag">Full Stack</span>
                             </div>
                         </div>
                         <div class="timeline-arrow"></div>
                         <div class="timeline-dot">
-                            <img src="img/e-msn.png" alt="Lycée" class="timeline-logo">
+                            <img src="img/e-msn.png" alt="Entreprise" class="timeline-logo">
                         </div>
                     </div>
 
@@ -92,16 +153,16 @@
                         <div class="timeline-content">
                             <div class="timeline-year">2023 - 2026</div>
                             <div class="timeline-title">BUT Informatique</div>
-                            <div class="timeline-desc">Université XYZ - Formation complète en développement logiciel et web</div>
+                            <div class="timeline-desc">IUT Montpellier - Formation complète en développement logiciel, web et management</div>
                             <div class="timeline-tags">
                                 <span class="tag">Études</span>
-                                <span class="tag">Dev Web</span>
+                                <span class="tag">Management</span>
                                 <span class="tag">Programmation</span>
                             </div>
                         </div>
                         <div class="timeline-arrow"></div>
                         <div class="timeline-dot">
-                            <img src="img/logo-universite.png" alt="Université" class="timeline-logo">
+                            <img src="img/logoIUT.png" alt="Université" class="timeline-logo">
                         </div>
                     </div>
 
@@ -117,42 +178,25 @@
                         </div>
                         <div class="timeline-arrow"></div>
                         <div class="timeline-dot">
-                            <img src="img/logo-tam.png" alt="TaM" class="timeline-logo">
+                            <img src="img/logoTAM.png" alt="TaM" class="timeline-logo">
                         </div>
                     </div>
 
                     <div class="timeline-item">
                         <div class="timeline-content">
-                            <div class="timeline-year">2025 - 2026</div>
-                            <div class="timeline-title">Agent Technique</div>
-                            <div class="timeline-desc">E-MSN - Support technique et maintenance des systèmes informatiques</div>
+                            <div class="timeline-year">2023</div>
+                            <div class="timeline-title">Baccalauréat</div>
+                            <div class="timeline-desc">Mention Bien - Formation générale complète avec spécialisation scientifique <br> Lycée Marc Bloch - Sérignan</div>
                             <div class="timeline-tags">
-                                <span class="tag">Emploi</span>
-                                <span class="tag">Technique</span>
+                                <span class="tag">Diplôme</span>
+                                <span class="tag">Lycée</span>
                             </div>
                         </div>
                         <div class="timeline-arrow"></div>
                         <div class="timeline-dot">
-                            <img src="img/logo-emsn.png" alt="E-MSN" class="timeline-logo">
+                            <img src="img/logoLyceeMarcBloch.png" alt="Lycée" class="timeline-logo">
                         </div>
                     </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <div class="timeline-year">2024</div>
-                            <div class="timeline-title">Développeur</div>
-                            <div class="timeline-desc">Poste actuel - Création de solutions web innovantes et performantes</div>
-                            <div class="timeline-tags">
-                                <span class="tag">Actuel</span>
-                                <span class="tag">Full Stack</span>
-                            </div>
-                        </div>
-                        <div class="timeline-arrow"></div>
-                        <div class="timeline-dot">
-                            <img src="img/logo-entreprise.png" alt="Entreprise" class="timeline-logo">
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </section>
@@ -162,42 +206,74 @@
                 <p class="titre">Mes Compétences</p>
                 <hr>
 
-                <div class="skills-container">
-                    <a href="#" class="skill-bubble">
-                        <div class="skill-icon">🌐</div>
-                        <h3 class="skill-name">Développement Web</h3>
-                        <p class="skill-desc">HTML, CSS, JavaScript</p>
+                <div class="skills-grid">
+
+                    <a href="realiser.html" class="skill-card">
+                        <div class="skill-content">
+                            <div class="skill-icon">💻</div>
+                            <div class="skill-info">
+                                <h3 class="skill-name">Réaliser</h3>
+                                <p class="skill-desc">Développer des applications informatiques simples</p>
+                                <span class="skill-badge">UE 1</span>
+                            </div>
+                        </div>
                     </a>
 
-                    <a href="#" class="skill-bubble">
-                        <div class="skill-icon">⚙️</div>
-                        <h3 class="skill-name">Backend</h3>
-                        <p class="skill-desc">Node.js, PHP, Python</p>
+                    <a href="optimiser.html" class="skill-card">
+                        <div class="skill-content">
+                            <div class="skill-icon">⚡</div>
+                            <div class="skill-info">
+                                <h3 class="skill-name">Optimiser</h3>
+                                <p class="skill-desc">Appréhender et construire des algorithmes</p>
+                                <span class="skill-badge">UE 2</span>
+                            </div>
+                        </div>
                     </a>
 
-                    <a href="#" class="skill-bubble">
-                        <div class="skill-icon">🗄️</div>
-                        <h3 class="skill-name">Base de données</h3>
-                        <p class="skill-desc">MySQL, MongoDB</p>
+                    <a href="administrer.html" class="skill-card">
+                        <div class="skill-content">
+                            <div class="skill-icon">🖥️</div>
+                            <div class="skill-info">
+                                <h3 class="skill-name">Administrer</h3>
+                                <p class="skill-desc">Installer et configurer un poste de travail</p>
+                                <span class="skill-badge">UE 3</span>
+                            </div>
+                        </div>
                     </a>
 
-                    <a href="#" class="skill-bubble">
-                        <div class="skill-icon">🎨</div>
-                        <h3 class="skill-name">Design UI/UX</h3>
-                        <p class="skill-desc">Figma, Photoshop</p>
+                    <a href="gerer.html" class="skill-card">
+                        <div class="skill-content">
+                            <div class="skill-icon">📊</div>
+                            <div class="skill-info">
+                                <h3 class="skill-name">Gérer</h3>
+                                <p class="skill-desc">Concevoir et mettre en place une base de données</p>
+                                <span class="skill-badge">UE 4</span>
+                            </div>
+                        </div>
                     </a>
 
-                    <a href="#" class="skill-bubble">
-                        <div class="skill-icon">🚀</div>
-                        <h3 class="skill-name">DevOps</h3>
-                        <p class="skill-desc">Git, Docker, CI/CD</p>
+                    <a href="conduire.html" class="skill-card">
+                        <div class="skill-content">
+                            <div class="skill-icon">🎯</div>
+                            <div class="skill-info">
+                                <h3 class="skill-name">Conduire</h3>
+                                <p class="skill-desc">Satisfaire les besoins des utilisateurs</p>
+                                <span class="skill-badge">UE 5</span>
+                            </div>
+                        </div>
                     </a>
 
-                    <a href="#" class="skill-bubble">
-                        <div class="skill-icon">📱</div>
-                        <h3 class="skill-name">Développement Mobile</h3>
-                        <p class="skill-desc">React Native, Flutter</p>
+                    <a href="collaborer.html" class="skill-card">
+                        <div class="skill-content">
+                            <div class="skill-icon">🤝</div>
+                            <div class="skill-info">
+                                <h3 class="skill-name">Collaborer</h3>
+                                <p class="skill-desc">Travailler dans une équipe informatique</p>
+                                <span class="skill-badge">UE 6</span>
+                            </div>
+                        </div>
                     </a>
+
                 </div>
             </div>
         </section>
@@ -210,10 +286,10 @@
                 <div class="projects-grid">
 
                     <!-- Projet 1 - Exemple Portfolio -->
-                    <a href="https://gitlab.com/votre-profil/portfolio" class="project-card" target="_blank">
+                    <a href="projets/apiPlatform.html" class="project-card">
                         <div class="project-header">
-                            <h3 class="project-title">Portfolio Personnel</h3>
-                            <span class="project-date">Nov 2024</span>
+                            <h3 class="project-title">Site de Critiques</h3>
+                            <span class="project-date">Dec 2025</span>
                         </div>
 
                         <p class="project-description">
@@ -223,16 +299,16 @@
                         <div class="project-skills">
                             <span class="skills-label">Compétences acquises :</span>
                             <div class="skills-list">
-                                <span class="skill">HTML/CSS</span>
+                                <span class="skill">Api Platform</span>
                                 <span class="skill">JavaScript</span>
-                                <span class="skill">Design UX/UI</span>
+                                <span class="skill">PHP</span>
                             </div>
                         </div>
 
                         <div class="project-tags">
                             <span class="tag">Web</span>
-                            <span class="tag">Frontend</span>
-                            <span class="tag">Responsive</span>
+                            <span class="tag">Api</span>
+                            <span class="tag">Back-end</span>
                         </div>
 
                         <svg class="project-link-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -241,9 +317,9 @@
                     </a>
 
                     <!-- Projet 2 - Exemple Application -->
-                    <a href="https://gitlab.com/votre-profil/gestion-taches" class="project-card" target="_blank">
+                    <a href="./projets/mastermind.html" class="project-card">
                         <div class="project-header">
-                            <h3 class="project-title">Gestionnaire de Tâches</h3>
+                            <h3 class="project-title">Mastermind</h3>
                             <span class="project-date">Oct 2024</span>
                         </div>
 
@@ -272,7 +348,7 @@
                     </a>
 
                     <!-- Projet 3 - Exemple API -->
-                    <a href="https://gitlab.com/votre-profil/api-meteo" class="project-card" target="_blank">
+                    <a href="./projets/stage.html" class="project-card">
                         <div class="project-header">
                             <h3 class="project-title">API Météo</h3>
                             <span class="project-date">Sep 2024</span>
@@ -344,7 +420,7 @@
                         </a>
 
                         <!-- CV Download -->
-                        <a href="path/to/cv.pdf" class="contact-link" download>
+                        <a href="./pdf/CV.pdf" class="contact-link" download>
                             <svg class="icon" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z"/>
                                 <path d="M14 2v6h6M12 18v-6M9 15l3 3 3-3" stroke="#5A5A4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -382,9 +458,7 @@
             </div>
         </section>
     </main>
-    <footer>
 
-    </footer>
 </body>
 </html>
 <script src="index.js"></script>

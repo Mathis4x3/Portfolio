@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Mastermind - Portfolio OURLIAC</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../css/projet.css" type="text/css" />
+</head>
+<body>
+<a href="../index.html#projets" class="back-button">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Retour aux projets
+</a>
+
+<div class="hero-section">
+    <div class="hero-content">
+        <span class="badge">Python • Pygame • Terminale</span>
+        <h1 class="project-title">Mastermind</h1>
+        <p class="project-subtitle">Jeu de réflexion avec interface graphique complète</p>
+    </div>
+</div>
+
+<div class="content-section">
+    <div class="section-block">
+        <h2>Contexte et découverte</h2>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--texte); margin-bottom: 30px;">
+            Ce projet réalisé en Terminale a marqué un tournant décisif dans mon parcours informatique. Avec un délai d'un mois pour concevoir et développer un jeu Mastermind complet, j'ai dû apprendre de manière autonome la programmation graphique avec Pygame tout en gérant la logique du jeu. C'est lors de ce projet que j'ai découvert la programmation orientée objet et que j'ai vraiment commencé à apprécier l'informatique.
+        </p>
+
+        <img src="img/mastermind/accueil.png" alt="Page d'accueil Mastermind" class="project-image">
+        <p class="image-caption">Interface d'accueil du jeu Mastermind</p>
+    </div>
+
+    <div class="section-block">
+        <h2>Fonctionnalités développées</h2>
+        <div class="projects-showcase">
+            <div class="showcase-item">
+                <div class="showcase-number">01</div>
+                <div class="showcase-content">
+                    <h3>Système de niveaux</h3>
+                    <p>Trois niveaux de difficulté avec des règles adaptées : modification du nombre de tentatives autorisées et activation/désactivation des doublons de couleurs pour ajuster le challenge selon les compétences du joueur.</p>
+                    <div class="showcase-tags">
+                        <span class="tag">Difficulté progressive</span>
+                        <span class="tag">Game Design</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="showcase-item">
+                <div class="showcase-number">02</div>
+                <div class="showcase-content">
+                    <h3>Interface graphique Pygame</h3>
+                    <p>Développement complet d'une interface utilisateur intuitive avec Pygame : affichage des pions colorés, système de feedback visuel pour les indices, et animations pour améliorer l'expérience de jeu.</p>
+                    <div class="showcase-tags">
+                        <span class="tag">Pygame</span>
+                        <span class="tag">UI/UX</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="showcase-item">
+                <div class="showcase-number">03</div>
+                <div class="showcase-content">
+                    <h3>Logique du jeu</h3>
+                    <p>Implémentation de l'algorithme de validation des combinaisons avec calcul des pions bien placés et mal placés. Génération aléatoire de la combinaison secrète selon les règles du niveau sélectionné.</p>
+                    <div class="showcase-tags">
+                        <span class="tag">Algorithmes</span>
+                        <span class="tag">Python</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="showcase-item">
+                <div class="showcase-number">04</div>
+                <div class="showcase-content">
+                    <h3>Gestion des événements</h3>
+                    <p>Système de gestion des clics souris pour la sélection des couleurs et la validation des coups. Implémentation d'un système de retour en arrière et de réinitialisation de partie.</p>
+                    <div class="showcase-tags">
+                        <span class="tag">Events</span>
+                        <span class="tag">Interactivité</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-block">
+        <h2>Démonstration vidéo</h2>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--texte); margin-bottom: 30px;">
+            Aperçu du gameplay et des différentes fonctionnalités du jeu en action.
+        </p>
+
+        <video controls style="width: 100%; border-radius: 20px; border: 3px solid rgba(var(--accent-1-rgb), 0.3); box-shadow: 0 8px 25px rgba(var(--accent-1-rgb), 0.15);">
+            <source src="video/mastermind.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la balise vidéo.
+        </video>
+        <p class="image-caption">Démonstration complète du jeu Mastermind</p>
+    </div>
+
+    <div class="section-block">
+        <h2>Défis techniques rencontrés</h2>
+        <div class="skills-list">
+            <div class="skill-item">
+                <div class="skill-icon">🎨</div>
+                <div>
+                    <h3>Gestion du rendu graphique</h3>
+                    <p>L'un des principaux défis a été de gérer efficacement le rendu graphique avec Pygame. Au début, le jeu souffrait de ralentissements car je redessinais l'intégralité de l'écran à chaque frame. J'ai résolu ce problème en implémentant un système de mise à jour partielle : seules les zones modifiées sont redessinées, ce qui a considérablement amélioré les performances et la fluidité de l'interface.</p>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">🧮</div>
+                <div>
+                    <h3>Algorithme de validation</h3>
+                    <p>La conception de l'algorithme de validation des combinaisons s'est avérée plus complexe que prévu, notamment pour différencier les pions "bien placés" des pions "mal placés" sans les compter deux fois. J'ai dû itérer plusieurs fois sur l'algorithme et réaliser de nombreux tests pour garantir un fonctionnement correct dans tous les cas de figure.</p>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">📚</div>
+                <div>
+                    <h3>Apprentissage autodidacte</h3>
+                    <p>N'ayant aucune expérience préalable avec Pygame, j'ai dû apprendre la bibliothèque de manière autonome en consultant la documentation officielle, des tutoriels en ligne et des exemples de code. Cette approche autodidacte m'a permis de développer une méthode de travail efficace pour acquérir rapidement de nouvelles compétences.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-block">
+        <h2>Communication avec le client</h2>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--texte); margin-bottom: 30px;">
+            Au-delà des aspects purement techniques, ce projet m'a permis de développer mes compétences en communication. J'ai dû échanger régulièrement avec le client pour bien comprendre ses attentes concernant les fonctionnalités souhaitées, notamment le système de niveaux de difficulté. Ces échanges m'ont appris l'importance d'une bonne compréhension du cahier des charges et de la validation progressive des fonctionnalités développées.
+        </p>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--texte);">
+            Le travail en autonomie m'a également permis d'améliorer ma méthode de travail personnelle : organisation du temps, gestion des priorités, et résolution de problèmes de manière indépendante tout en sachant quand demander de l'aide ou des clarifications.
+        </p>
+    </div>
+
+    <div class="section-block">
+        <h2>Évolution du projet</h2>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--texte); margin-bottom: 30px;">
+            Actuellement, je suis en train de refactoriser le code pour le rendre orienté objet. Cette refonte me permet d'appliquer les concepts de POO que j'ai appris depuis, rendant le code plus maintenable, extensible et professionnel. C'est également l'occasion de réviser et d'améliorer certaines parties du code initial.
+        </p>
+    </div>
+
+    <div class="section-block">
+        <h2>Compétences développées</h2>
+        <div class="skills-list">
+            <div class="skill-item">
+                <div class="skill-icon">🐍</div>
+                <div>
+                    <h3>Maîtrise de Python</h3>
+                    <p>Partant de zéro en Python, ce projet m'a permis d'acquérir des bases solides dans ce langage : structures de données, fonctions, modules, et gestion des événements. J'ai également découvert l'importance de la documentation et des bonnes pratiques de codage.</p>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">🎮</div>
+                <div>
+                    <h3>Développement de jeux</h3>
+                    <p>Apprentissage complet de Pygame pour créer une interface graphique interactive : gestion des surfaces, des sprites, des événements clavier/souris, et de la boucle de jeu. Compréhension des principes fondamentaux du game development.</p>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">⚙️</div>
+                <div>
+                    <h3>Gestion de projet</h3>
+                    <p>Planification et réalisation d'un projet complet en un mois : définition des objectifs, découpage en tâches, gestion du temps, tests et débogage. Première expérience concrète de gestion de projet informatique de A à Z.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-block">
+        <h2>Technologies utilisées</h2>
+        <div class="tech-grid">
+            <div class="tech-card">
+                <span class="tech-name">Python</span>
+                <div class="tech-bar">
+                    <div class="tech-progress" style="width: 85%"></div>
+                </div>
+            </div>
+            <div class="tech-card">
+                <span class="tech-name">Pygame</span>
+                <div class="tech-bar">
+                    <div class="tech-progress" style="width: 80%"></div>
+                </div>
+            </div>
+            <div class="tech-card">
+                <span class="tech-name">Algorithmique</span>
+                <div class="tech-bar">
+                    <div class="tech-progress" style="width: 75%"></div>
+                </div>
+            </div>
+            <div class="tech-card">
+                <span class="tech-name">Gestion d'événements</span>
+                <div class="tech-bar">
+                    <div class="tech-progress" style="width: 80%"></div>
+                </div>
+            </div>
+            <div class="tech-card">
+                <span class="tech-name">Communication client</span>
+                <div class="tech-bar">
+                    <div class="tech-progress" style="width: 70%"></div>
+                </div>
+            </div>
+            <div class="tech-card">
+                <span class="tech-name">Apprentissage autonome</span>
+                <div class="tech-bar">
+                    <div class="tech-progress" style="width: 90%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<footer class="project-footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Mathis OURLIAC</h3>
+            <p>Étudiant en Informatique</p>
+            <p>Agent technique chez E-MSN</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Navigation</h4>
+            <a href="../index.html">Accueil</a>
+            <a href="../index.html#parcours">Parcours</a>
+            <a href="../index.html#competences">Compétences</a>
+            <a href="../index.html#projets">Projets</a>
+            <a href="../index.html#contacts">Contact</a>
+        </div>
+
+        <div class="footer-section">
+            <h4>Liens</h4>
+            <a href="https://gitlab.com/votre-profil" target="_blank">GitLab</a>
+            <a href="https://linkedin.com/in/votre-profil" target="_blank">LinkedIn</a>
+            <a href="path/to/cv.pdf" download>Télécharger mon CV</a>
+        </div>
+
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <p>📧 votre@email.com</p>
+            <p>📍 Paris, France</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Mathis OURLIAC - Tous droits réservés</p>
+        <div class="footer-socials">
+            <a href="https://gitlab.com/votre-profil" target="_blank" aria-label="GitLab">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M23.546 10.93L13.667.98a1.56 1.56 0 00-2.604 0L1.184 10.93a1.56 1.56 0 00-.465 1.768l3.58 10.74c.192.576.768.96 1.44.96h12.482c.672 0 1.248-.384 1.44-.96l3.58-10.74a1.56 1.56 0 00-.465-1.768v0z"/>
+                </svg>
+            </a>
+            <a href="https://linkedin.com/in/votre-profil" target="_blank" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+            </a>
+            <a href="https://github.com/votre-profil" target="_blank" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</footer>
+</html>

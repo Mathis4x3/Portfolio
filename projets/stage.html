@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Stage TaM - Portfolio OURLIAC</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../css/projet.css" type="text/css" />
+</head>
+<body>
+<a href="../index.html#projets" class="back-button">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Retour aux projets
+</a>
+
+<div class="hero-section">
+    <div class="hero-content">
+        <span class="badge">PHP • MySQL • JavaScript • MVC</span>
+        <h1 class="project-title">Stage TaM Montpellier</h1>
+        <p class="project-subtitle">Développement d'un site web pour la gestion des perturbations du réseau de transport</p>
+    </div>
+</div>
+
+<div class="content-section">
+    <div class="section-block">
+        <h2>Contexte du stage</h2>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--texte); margin-bottom: 30px;">
+            Stage de 9 semaines réalisé au sein de TaM Montpellier 3M, société publique locale gérant les transports en commun de la métropole montpelliéraine. Intégré à la Direction des Systèmes d'Information (DSI), j'ai été chargé de concevoir et développer un site web destiné à remplacer le module TYPO3 utilisé pour la gestion des informations relatives aux perturbations du réseau de transport.
+        </p>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--texte);">
+            TaM gère un réseau diversifié composant de 4 lignes de tramway (une cinquième en construction), de nombreuses lignes de bus et emploie environ 1142 personnes dont 800 conducteurs. Ce projet s'inscrit dans une démarche d'amélioration continue des outils internes pour optimiser la communication d'informations critiques auprès des conducteurs.
+        </p>
+    </div>
+
+    <div class="section-block">
+        <h2>Problématique et objectifs</h2>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--texte); margin-bottom: 30px;">
+            Le module TYPO3 existant présentait plusieurs limitations majeures : une interface peu intuitive avec une arborescence complexe, des traductions parfois approximatives, et surtout une lenteur d'affichage des informations. Les conducteurs devaient faire face à des pavés de texte sur les écrans de télévision, rendant la consultation des informations fastidieuse et chronophage.
+        </p>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--texte);">
+            L'objectif principal était de créer un site web permettant une gestion efficace des informations de perturbations avec deux interfaces distinctes : une partie administrative pour les contributeurs (création, modification, suppression des informations) et une partie consultation pour les conducteurs (affichage optimisé sur différents supports : grands écrans TV, écrans tactiles, ordinateurs).
+        </p>
+    </div>
+
+    <div class="section-block">
+        <h2>Fonctionnalités développées</h2>
+        <div class="projects-showcase">
+            <div class="showcase-item">
+                <div class="showcase-number">01</div>
+                <div class="showcase-content">
+                    <h3>Gestion des perturbations</h3>
+                    <p>Développement d'un système complet de CRUD (Create, Read, Update, Delete) pour les informations de perturbations. Chaque saisie comprend un titre, sous-titre, texte informatif, dates de début/fin, lignes concernées, sites d'affichage, type d'information et possibilité d'ajouter des images illustratives. Système de programmation de publication avec gestion des brouillons.</p>
+                    <div class="showcase-tags">
+                        <span class="tag">PHP</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">Formulaires</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="showcase-item">
+                <div class="showcase-number">02</div>
+                <div class="showcase-content">
+                    <h3>Base de données relationnelle</h3>
+                    <p>Conception et implémentation d'une base de données MySQL optimisée comprenant 9 tables interconnectées : Saisie, Événement, Ligne, Type, Site, Images, et tables de liaison. Architecture pensée pour garantir l'intégrité des données et permettre des requêtes performantes malgré le volume d'informations.</p>
+                    <div class="showcase-tags">
+                        <span class="tag">Modélisation</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">Optimisation</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="showcase-item">
+                <div class="showcase-number">03</div>
+                <div class="showcase-content">
+                    <h3>Interface conducteurs multi-supports</h3>
+                    <p>Création de trois types d'affichages adaptés aux différents dispositifs : grands écrans (télévisions) avec défilement automatique des informations empilées, écrans tactiles avec damier interactif des lignes et indicateurs visuels, et version ordinateur complète avec navigation dynamique sans rechargement de page.</p>
+                    <div class="showcase-tags">
+                        <span class="tag">Responsive Design</span>
+                        <span class="tag">UX/UI</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="showcase-item">
+                <div class="showcase-number">04</div>
+                <div class="showcase-content">
+                    <h3>Architecture MVC</h3>
+                    <p>Implémentation complète du pattern MVC (Modèle-Vue-Contrôleur) pour une séparation claire des responsabilités : le Modèle gère les interactions avec la base de données, la Vue s'occupe de l'affichage, et le Contrôleur orchestre les échanges. Cette architecture garantit maintenabilité et évolutivité du code.</p>
+                    <div class="showcase-tags">
+                        <span class="tag">Architecture logicielle</span>
+                        <span class="tag">Design Pattern</span>
+                        <span class="tag">Clean Code</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="showcase-item">
+                <div class="showcase-number">05</div>
+                <div class="showcase-content">
+                    <h3>Réécriture d'URL et sécurisation</h3>
+                    <p>Mise en place d'URL propres et SEO-friendly via mod_rewrite Apache avec le pattern : racine/app/routeur/contrôleur/action/paramètres. Implémentation de mesures de sécurité contre les injections SQL et XSS, validation côté serveur de toutes les entrées utilisateur, et gestion sécurisée des sessions.</p>
+                    <div class="showcase-tags">
+                        <span class="tag">Apache</span>
+                        <span class="tag">Sécurité</span>
+                        <span class="tag">URL Rewriting</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="showcase-item">
+                <div class="showcase-number">06</div>
+                <div class="showcase-content">
+                    <h3>Interactivité JavaScript</h3>
+                    <p>Développement de fonctionnalités dynamiques : affichage en temps réel des images lors de leur sélection dans le formulaire, navigation sans rechargement de page pour la consultation des informations par ligne, animations de défilement pour les grands écrans, et gestion d'événements pour une expérience utilisateur fluide.</p>
+                    <div class="showcase-tags">
+                        <span class="tag">DOM Manipulation</span>
+                        <span class="tag">AJAX</span>
+                        <span class="tag">Events</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-block">
+        <h2>Défis techniques rencontrés</h2>
+        <div class="skills-list">
+            <div class="skill-item">
+                <div class="skill-icon">🔗</div>
+                <div>
+                    <h3>Gestion de la réécriture d'URL</h3>
+                    <p>La mise en place du système de réécriture d'URL avec mod_rewrite a présenté un défi particulier concernant les liens internes au site. Les liens relatifs causaient des problèmes de navigation car le navigateur les interprétait comme des chemins de dossiers réels. J'ai résolu ce problème en créant une classe de configuration centralisant toutes les URL avec des getters, permettant une maintenance facilitée et une modification aisée en cas de changement d'hébergement. Un second défi concernait le texte informatif contenant des balises HTML (via WYSIWYG), dont les caractères "/" entraient en conflit avec les séparateurs d'URL. La solution a été de remplacer les liens par des boutons submit avec des valeurs distinctes.</p>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">🎨</div>
+                <div>
+                    <h3>Design des interfaces d'affichage</h3>
+                    <p>La conception des maquettes pour l'affichage des informations aux conducteurs a nécessité plusieurs itérations. Les premières versions (défilement horizontal de blocs, défilement vertical de lignes) se sont révélées trop lentes pour un usage pratique, sachant que les conducteurs disposent de seulement 5 minutes avant leur prise de service. La solution retenue d'un empilement d'informations avec défilement rapide et la séparation des consignes sur un écran dédié a permis d'optimiser la consultation tout en conservant une excellente lisibilité.</p>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">📊</div>
+                <div>
+                    <h3>Architecture de la base de données</h3>
+                    <p>La modélisation de la base de données a nécessité une réflexion approfondie pour répondre aux besoins métier : gestion des relations many-to-many entre saisies et lignes/sites, distinction entre informations standards et événements d'urgence, système de brouillons et de publication programmée. La création de tables de liaison appropriées et l'optimisation des requêtes SQL pour garantir des temps de réponse rapides malgré le volume potentiel de données ont été des aspects cruciaux du développement.</p>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">⚡</div>
+                <div>
+                    <h3>Interactivité sans rechargement de page</h3>
+                    <p>L'implémentation de l'interface tactile avec navigation dynamique (clic sur une ligne → affichage des informations → sélection d'une information → affichage des détails) sans rechargement de page a nécessité une maîtrise approfondie de JavaScript et de la manipulation du DOM. L'utilisation d'écouteurs d'événements, de requêtes asynchrones et de mise à jour ciblée des éléments HTML a permis de créer une expérience utilisateur fluide et réactive, similaire à une application native.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-block">
+        <h2>Méthodologie de travail</h2>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--texte); margin-bottom: 30px;">
+            Le projet a été mené selon une approche inspirée de la méthode agile Scrum, avec des cycles de développement courts et des présentations régulières à ma tutrice de stage. Bien que les sprints n'aient pas été formellement définis au début (prise de contact un peu précipitée), j'ai rapidement mis en place une cadence de "daily meetings" informels pour valider les avancées et ajuster le développement en fonction des retours.
+        </p>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--texte); margin-bottom: 30px;">
+            Mon processus de travail s'articulait autour des étapes suivantes : réception et analyse des besoins, schématisation et création de maquettes, développement du code, tests en environnement local, déploiement sur le serveur de test TaM, puis validation avec ma tutrice. Cette approche itérative a permis de s'assurer que le produit final correspondait parfaitement aux attentes tout en gardant une flexibilité d'adaptation.
+        </p>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--texte);">
+            Le degré d'autonomie important qui m'a été accordé m'a permis de prendre des décisions techniques structurantes (choix de l'architecture MVC, design pattern, organisation du code) tout en sachant solliciter l'avis de ma tutrice sur les aspects fonctionnels et UX. J'ai également eu l'opportunité d'accompagner ma tutrice sur le terrain pour observer les interactions avec les clients internes, ce qui m'a permis de mieux comprendre l'importance de l'analyse des besoins au-delà du simple développement.
+        </p>
+    </div>
+
+    <div class="section-block">
+        <h2>Résultats et perspectives</h2>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--texte); margin-bottom: 30px;">
+            Le projet a été livré dans les délais impartis (9 semaines) avec l'ensemble des fonctionnalités demandées opérationnelles. L'interface administrative offre une expérience nettement supérieure à TYPO3 en termes d'ergonomie et d'intuitivité. Les affichages destinés aux conducteurs ont été optimisés pour permettre une consultation rapide et efficace des informations, répondant ainsi à la problématique initiale de lenteur et de difficulté de lecture.
+        </p>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--texte); margin-bottom: 30px;">
+            Cependant, la mise en production effective du site reste en suspens pour des raisons liées à la migration des données depuis TYPO3 et à certaines considérations organisationnelles. Le projet pourrait néanmoins servir de cahier des charges détaillé pour un développement similaire, potentiellement dans le cadre d'une alternance de troisième année avec une stack technologique différente selon les besoins évolutifs de l'entreprise.
+        </p>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--texte);">
+            Les perspectives d'évolution du projet incluent : l'ajout d'un système complet de gestion des utilisateurs et des droits d'accès, l'intégration avec d'autres systèmes d'information de TaM (SAE, billettique), la création d'une API REST pour permettre à d'autres applications d'accéder aux données de perturbations, et l'ajout de statistiques d'utilisation pour optimiser davantage les affichages en fonction des usages réels.
+        </p>
+    </div>
+
+    <div class="section-block">
+        <h2>Compétences développées</h2>
+        <div class="skills-list">
+            <div class="skill-item">
+                <div class="skill-icon">💻</div>
+                <div>
+                    <h3>Développement full-stack</h3>
+                    <p>Maîtrise approfondie du développement web complet : PHP pour le back-end avec gestion des sessions, requêtes SQL, traitement des formulaires et sécurisation des entrées ; HTML/CSS pour la structure et le design responsive ; JavaScript pour l'interactivité et les fonctionnalités dynamiques. Apprentissage de l'équilibre entre les différentes couches d'une application web moderne.</p>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">🏗️</div>
+                <div>
+                    <h3>Architecture logicielle</h3>
+                    <p>Mise en pratique du pattern MVC pour structurer une application complexe de manière maintenable et évolutive. Compréhension des principes de séparation des responsabilités, d'encapsulation et de réutilisabilité du code. Apprentissage des bonnes pratiques de nommage, d'organisation des fichiers et de documentation du code pour faciliter la maintenance future.</p>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">🗄️</div>
+                <div>
+                    <h3>Gestion de bases de données</h3>
+                    <p>Conception complète d'une base de données relationnelle depuis le cahier des charges : modélisation entité-association, création du schéma relationnel, normalisation des tables, optimisation des requêtes SQL. Maîtrise des jointures complexes, des transactions et de l'intégrité référentielle pour garantir la cohérence des données dans un contexte professionnel exigeant.</p>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">👥</div>
+                <div>
+                    <h3>Analyse des besoins et communication</h3>
+                    <p>Développement de compétences essentielles en analyse fonctionnelle : identification et formalisation des besoins utilisateurs, création de cahier des charges, priorisation des fonctionnalités selon les contraintes de temps. Amélioration de la communication avec les clients internes pour comprendre les attentes réelles au-delà des demandes initiales, et capacité à proposer des solutions adaptées au contexte métier.</p>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">🎯</div>
+                <div>
+                    <h3>Gestion de projet</h3>
+                    <p>Expérience complète de la gestion d'un projet informatique en autonomie : planification des tâches, estimation des charges, gestion des priorités, respect des délais. Apprentissage de la méthode agile avec cycles itératifs et validation régulière. Capacité à prendre des décisions techniques justifiées et à adapter le développement en fonction des retours tout en maintenant la qualité du code et le respect des bonnes pratiques.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-block">
+        <h2>Technologies utilisées</h2>
+        <div class="tech-grid">
+            <div class="tech-card">
+                <span class="tech-name">PHP</span>
+                <div class="tech-bar">
+                    <div class="tech-progress" style="width: 85%"></div>
+                </div>
+            </div>
+            <div class="tech-card">
+                <span class="tech-name">MySQL</span>
+                <div class="tech-bar">
+                    <div class="tech-progress" style="width: 80%"></div>
+                </div>
+            </div>
+            <div class="tech-card">
+                <span class="tech-name">JavaScript</span>
+                <div class="tech-bar">
+                    <div class="tech-progress" style="width: 75%"></div>
+                </div>
+            </div>
+            <div class="tech-card">
+                <span class="tech-name">HTML/CSS</span>
+                <div class="tech-bar">
+                    <div class="tech-progress" style="width: 85%"></div>
+                </div>
+            </div>
+            <div class="tech-card">
+                <span class="tech-name">Architecture MVC</span>
+                <div class="tech-bar">
+                    <div class="tech-progress" style="width: 80%"></div>
+                </div>
+            </div>
+            <div class="tech-card">
+                <span class="tech-name">Apache (mod_rewrite)</span>
+                <div class="tech-bar">
+                    <div class="tech-progress" style="width: 70%"></div>
+                </div>
+            </div>
+            <div class="tech-card">
+                <span class="tech-name">Modélisation BDD</span>
+                <div class="tech-bar">
+                    <div class="tech-progress" style="width: 85%"></div>
+                </div>
+            </div>
+            <div class="tech-card">
+                <span class="tech-name">Responsive Design</span>
+                <div class="tech-bar">
+                    <div class="tech-progress" style="width: 80%"></div>
+                </div>
+            </div>
+            <div class="tech-card">
+                <span class="tech-name">Sécurité web</span>
+                <div class="tech-bar">
+                    <div class="tech-progress" style="width: 75%"></div>
+                </div>
+            </div>
+            <div class="tech-card">
+                <span class="tech-name">Gestion de projet Agile</span>
+                <div class="tech-bar">
+                    <div class="tech-progress" style="width: 70%"></div>
+                </div>
+            </div>
+            <div class="tech-card">
+                <span class="tech-name">Analyse des besoins</span>
+                <div class="tech-bar">
+                    <div class="tech-progress" style="width: 85%"></div>
+                </div>
+            </div>
+            <div class="tech-card">
+                <span class="tech-name">UX/UI Design</span>
+                <div class="tech-bar">
+                    <div class="tech-progress" style="width: 75%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-block">
+        <h2>Bilan personnel</h2>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--texte); margin-bottom: 30px;">
+            Ce stage de 9 semaines chez TaM Montpellier a constitué une expérience professionnelle extrêmement enrichissante, me permettant de mettre en pratique l'ensemble des compétences acquises durant ma formation en BUT Informatique. Au-delà des aspects purement techniques, j'ai découvert la réalité du métier de développeur en entreprise, avec ses contraintes, ses défis et ses satisfactions.
+        </p>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--texte); margin-bottom: 30px;">
+            J'ai particulièrement apprécié le développement back-end et l'architecture logicielle, domaines dans lesquels je souhaite me spécialiser à l'avenir. La conception de la base de données, la structuration du code selon le pattern MVC et la résolution des problématiques de sécurisation ont été les aspects les plus gratifiants du projet. Cette expérience a confirmé mon intérêt pour ces aspects "invisibles" mais essentiels d'une application web.
+        </p>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--texte); margin-bottom: 30px;">
+            Sur le plan personnel, ce stage m'a permis de développer des soft skills importantes : prise de décision technique en autonomie, acceptation constructive des retours et des refus sur certaines propositions, communication efficace avec les parties prenantes, et gestion du temps et des priorités. J'ai appris à défendre mes choix techniques tout en restant ouvert aux suggestions et contraintes métier.
+        </p>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--texte);">
+            L'intégration au sein de la DSI de TaM a été excellente, et cette expérience me donne envie de poursuivre l'aventure dans le cadre d'une alternance de troisième année. Le projet développé durant ce stage pourrait d'ailleurs constituer une base solide pour un projet d'alternance plus ambitieux, avec une refonte potentielle dans une stack technologique plus moderne ou l'ajout de fonctionnalités avancées selon l'évolution des besoins de l'entreprise.
+        </p>
+    </div>
+</div>
+</body>
+<footer class="project-footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Mathis OURLIAC</h3>
+            <p>Étudiant en Informatique</p>
+            <p>Agent technique chez E-MSN</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Navigation</h4>
+            <a href="../index.html">Accueil</a>
+            <a href="../index.html#parcours">Parcours</a>
+            <a href="../index.html#competences">Compétences</a>
+            <a href="../index.html#projets">Projets</a>
+            <a href="../index.html#contacts">Contact</a>
+        </div>
+
+        <div class="footer-section">
+            <h4>Liens</h4>
+            <a href="https://gitlab.com/votre-profil" target="_blank">GitLab</a>
+            <a href="https://linkedin.com/in/votre-profil" target="_blank">LinkedIn</a>
+            <a href="path/to/cv.pdf" download>Télécharger mon CV</a>
+        </div>
+
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <p>📧 votre@email.com</p>
+            <p>📍 Béziers, France</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Mathis OURLIAC - Tous droits réservés</p>
+        <div class="footer-socials">
+            <a href="https://gitlab.com/votre-profil" target="_blank" aria-label="GitLab">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M23.546 10.93L13.667.98a1.56 1.56 0 00-2.604 0L1.184 10.93a1.56 1.56 0 00-.465 1.768l3.58 10.74c.192.576.768.96 1.44.96h12.482c.672 0 1.248-.384 1.44-.96l3.58-10.74a1.56 1.56 0 00-.465-1.768v0z"/>
+                </svg>
+            </a>
+            <a href="https://linkedin.com/in/votre-profil" target="_blank" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+            </a>
+            <a href="https://github.com/votre-profil" target="_blank" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.

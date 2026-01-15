@@ -1,11 +1,11 @@
 const sections = document.querySelectorAll('section');
-const buttonsNavBar = document.querySelectorAll('#navBar>div');
+const buttonsNavBar = document.querySelectorAll('#navBar>button');
 const arrows = document.querySelectorAll('.arrow');
 
+//fleches sur le côté
 arrows.forEach(arrow => {
     arrow.addEventListener('click', function () {
         if(arrow.classList.contains('right')) {
-            console.log("droit");
             afficherSectionSuivante();
         } else {
             afficherSectionPrecedente();
@@ -13,14 +13,19 @@ arrows.forEach(arrow => {
     })
 })
 
-buttonsNavBar.forEach(function(div) {
-    div.addEventListener("click", function() {
-        let choice = div.classList[0];
+//bouton en bas de l'écran
+buttonsNavBar.forEach(function(button) {
+    button.addEventListener("click", function() {
+        let choice = button.classList[0];
         let section = document.getElementById(choice);
-        changerAffichageButtons(section);
-        changerAffichageSection(section);
+        afficherSection(section);
     });
 });
+
+function afficherSection(section){
+    changerAffichageSection(section);
+    changerAffichageButtons(section);
+}
 
 function changerAffichageButtons(section) {
     const indiceChosen = [...sections].indexOf(section);
@@ -73,8 +78,7 @@ function afficherSectionSuivante(){
     } else {
         section = sections[[...sections].indexOf(actual) + 1];
     }
-    changerAffichageButtons(section);
-    changerAffichageSection(section);
+    afficherSection(section);
 }
 function afficherSectionPrecedente() {
     const indiceActual = [...sections].indexOf(actual)
@@ -84,12 +88,22 @@ function afficherSectionPrecedente() {
     } else {
         section = sections[[...sections].indexOf(actual) - 1];
     }
-    changerAffichageButtons(section);
-    changerAffichageSection(section);
+    afficherSection(section);
 }
 
-changerAffichageSection(sections[0]);
-changerAffichageButtons(sections[0]);
+// Gestion du hash dans l'URL au chargement
+window.addEventListener('load', function() {
+    const hash = window.location.hash;
+    if (hash) {
+        const sectionId = hash.substring(1);
+        const section = document.getElementById(sectionId);
+        if (section) {
+            afficherSection(section);
+        }
+    } else{
+        afficherSection(sections[0])
+    }
+});
 
 let isScrolling = false;
 const SEUIL = 50; // Distance minimum pour déclencher le changement
