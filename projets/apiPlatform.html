@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title>CTFd - Portfolio OURLIAC</title>
+    <title>Site de Critiques de Films - Portfolio OURLIAC</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../css/projet.css" type="text/css" />
@@ -16,9 +16,9 @@
 
 <div class="hero-section">
     <div class="hero-content">
-        <span class="badge">Cybersécurité • Scrum • Travail d'équipe</span>
-        <h1 class="project-title">CTFd</h1>
-        <p class="project-subtitle">Plateforme de Capture The Flag pour la sensibilisation cyber</p>
+        <span class="badge">Symfony • API Platform • Vue.js • JWT</span>
+        <h1 class="project-title">Site de Critiques de Films</h1>
+        <p class="project-subtitle">Application full-stack avec API REST et interface moderne</p>
     </div>
 </div>
 
@@ -26,11 +26,38 @@
     <div class="section-block">
         <h2>Contexte et objectifs</h2>
         <p style="font-size: 1.1rem; line-height: 1.8; color: var(--texte); margin-bottom: 30px;">
-            L'association YGGAME nous a demandé comme projet un CTF (Capture the Flag - « Capturez le drapeau ») afin de l'utiliser pour l'un de leurs événements pour sensibiliser les personnes à la cybersécurité. Pour cela nous étions composés d'une équipe de 4 personnes avec un semestre entier pour proposer un site web sécurisé possédant toutes les demandes du client.
+            Projet universitaire réalisé en équipe de 4 personnes sur une durée d'un mois et demi. Mon rôle principal était de développer l'API REST avec Symfony et API Platform, tandis que mes coéquipiers se concentraient davantage sur le front-end Vue.js et l'intégration.
         </p>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--texte);">
+            L'objectif était de créer une plateforme complète permettant aux utilisateurs de découvrir des films, de publier leurs critiques et de gérer leurs favoris. Le projet devait mettre en œuvre une architecture moderne séparant clairement le back-end (API) du front-end (SPA), avec une authentification sécurisée et une expérience utilisateur fluide.
+        </p>
+    </div>
 
-        <img src="img/ctfd/logo.png" alt="Logo Yggame" class="project-image">
-        <p class="image-caption">Logo de l'association Yggame</p>
+    <div class="section-block">
+        <h2>Architecture technique</h2>
+        <div class="skills-list">
+            <div class="skill-item">
+                <div class="skill-icon">🔧</div>
+                <div>
+                    <h3>API REST avec Symfony & API Platform</h3>
+                    <p>Développement d'une API RESTful complète utilisant API Platform pour exposer les ressources (Films, Critiques, Utilisateurs). Mise en place de la validation des données, de la sérialisation personnalisée et des filtres de recherche. L'API communique avec l'API externe TMDB pour récupérer automatiquement les affiches des films en fonction de leur nom.</p>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">🎨</div>
+                <div>
+                    <h3>Interface Vue.js responsive</h3>
+                    <p>Front-end développé avec Vue.js offrant une interface utilisateur moderne et réactive. Design minimaliste mais élégant avec une attention particulière portée à l'expérience utilisateur. L'application est entièrement responsive et s'adapte à tous les types d'écrans.</p>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">🔐</div>
+                <div>
+                    <h3>Authentification JWT sécurisée</h3>
+                    <p>Système d'authentification basé sur JWT (JSON Web Tokens) stockés dans des cookies sécurisés. Mise en place de Security Voters pour gérer finement les permissions : seul l'auteur d'une critique peut la modifier ou la supprimer, garantissant ainsi l'intégrité des données.</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="section-block">
@@ -39,11 +66,12 @@
             <div class="showcase-item">
                 <div class="showcase-number">01</div>
                 <div class="showcase-content">
-                    <h3>Scoreboard dynamique</h3>
-                    <p>Tableau de classement qui s'actualise automatiquement en temps réel pour suivre la progression des participants durant les événements.</p>
+                    <h3>Gestion complète des films</h3>
+                    <p>Création de fiches films avec récupération automatique des affiches via l'API TMDB. Système de recherche par nom de film avec filtres dynamiques. Les utilisateurs peuvent ajouter des films à leur liste de favoris pour un accès rapide à leurs contenus préférés.</p>
                     <div class="showcase-tags">
-                        <span class="tag">Real-time</span>
-                        <span class="tag">Leaderboard</span>
+                        <span class="tag">TMDB API</span>
+                        <span class="tag">Recherche</span>
+                        <span class="tag">Favoris</span>
                     </div>
                 </div>
             </div>
@@ -51,11 +79,12 @@
             <div class="showcase-item">
                 <div class="showcase-number">02</div>
                 <div class="showcase-content">
-                    <h3>Base de données intégrée</h3>
-                    <p>Système de base de données robuste lié au CTF pour gérer les utilisateurs, les défis et les scores de manière efficace.</p>
+                    <h3>Système de critiques et notation</h3>
+                    <p>Les utilisateurs peuvent rédiger des critiques détaillées pour chaque film avec un système de notation intégré. Chaque critique est liée à son auteur et au film concerné. Interface intuitive permettant de créer une critique directement depuis la page d'un film.</p>
                     <div class="showcase-tags">
-                        <span class="tag">Database</span>
-                        <span class="tag">SQL</span>
+                        <span class="tag">CRUD</span>
+                        <span class="tag">Notation</span>
+                        <span class="tag">Relations</span>
                     </div>
                 </div>
             </div>
@@ -63,11 +92,12 @@
             <div class="showcase-item">
                 <div class="showcase-number">03</div>
                 <div class="showcase-content">
-                    <h3>Interface de gestion Docker</h3>
-                    <p>Interface graphique intuitive pour la gestion des conteneurs Docker, facilitant le déploiement et la maintenance des défis.</p>
+                    <h3>Gestion des comptes utilisateurs</h3>
+                    <p>Système complet d'inscription et de connexion avec validation des données côté API. Profils utilisateurs avec photos récupérées automatiquement via Gravatar. Chaque utilisateur peut gérer ses propres critiques et sa liste de films favoris.</p>
                     <div class="showcase-tags">
-                        <span class="tag">Docker</span>
-                        <span class="tag">DevOps</span>
+                        <span class="tag">Authentification</span>
+                        <span class="tag">Gravatar</span>
+                        <span class="tag">Profils</span>
                     </div>
                 </div>
             </div>
@@ -75,11 +105,12 @@
             <div class="showcase-item">
                 <div class="showcase-number">04</div>
                 <div class="showcase-content">
-                    <h3>Défis variés et progressifs</h3>
-                    <p>Multiples défis de tous niveaux et de tous domaines : RGPD, Web, Réseau, Cryptographie, etc. Pour une expérience d'apprentissage complète.</p>
+                    <h3>Contrôle d'accès avec Voters</h3>
+                    <p>Implémentation de Security Voters Symfony pour gérer les permissions de manière granulaire. Un utilisateur ne peut modifier ou supprimer que ses propres critiques, garantissant ainsi la sécurité et l'intégrité du contenu publié par la communauté.</p>
                     <div class="showcase-tags">
-                        <span class="tag">Challenges</span>
-                        <span class="tag">Security</span>
+                        <span class="tag">Security Voters</span>
+                        <span class="tag">Permissions</span>
+                        <span class="tag">Sécurité</span>
                     </div>
                 </div>
             </div>
@@ -87,11 +118,25 @@
             <div class="showcase-item">
                 <div class="showcase-number">05</div>
                 <div class="showcase-content">
-                    <h3>Bot Discord intégré</h3>
-                    <p>Bot Discord connecté au CTF pour des notifications automatiques, des statistiques et une meilleure interaction avec la communauté.</p>
+                    <h3>Recherche et filtrage avancés</h3>
+                    <p>Moteur de recherche permettant de filtrer les films par nom avec mise à jour instantanée des résultats. Possibilité de filtrer l'affichage pour ne voir que ses propres films ajoutés. Interface de recherche réactive offrant une expérience utilisateur fluide.</p>
                     <div class="showcase-tags">
-                        <span class="tag">Discord API</span>
-                        <span class="tag">Bot</span>
+                        <span class="tag">Filtres API Platform</span>
+                        <span class="tag">Recherche temps réel</span>
+                        <span class="tag">UX</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="showcase-item">
+                <div class="showcase-number">06</div>
+                <div class="showcase-content">
+                    <h3>Intégration d'APIs externes</h3>
+                    <p>Connexion avec l'API TMDB (The Movie Database) pour récupérer automatiquement les affiches et informations des films. Intégration de Gravatar pour l'affichage des photos de profil basées sur l'adresse email, offrant une personnalisation instantanée sans upload d'images.</p>
+                    <div class="showcase-tags">
+                        <span class="tag">TMDB</span>
+                        <span class="tag">Gravatar</span>
+                        <span class="tag">APIs tierces</span>
                     </div>
                 </div>
             </div>
@@ -99,67 +144,118 @@
     </div>
 
     <div class="section-block">
-        <h2>Méthodologie Agile Scrum</h2>
+        <h2>Modèle de données</h2>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--texte); margin-bottom: 30px;">
+            L'architecture de la base de données repose sur trois entités principales interconnectées :
+        </p>
         <div class="skills-list">
             <div class="skill-item">
-                <div class="skill-icon">📊</div>
+                <div class="skill-icon">👤</div>
                 <div>
-                    <h3>Rôle de Scrum Master</h3>
-                    <p>Il a été demandé de travailler sur ce projet avec la méthode agile Scrum. J'ai eu la chance d'être le Scrum Master de l'équipe afin de pouvoir observer le bon fonctionnement de la méthode, la création des burnup et burndown charts ou encore la mise en place des multiples réunions.</p>
+                    <h3>Entité Utilisateur</h3>
+                    <p>Gère l'authentification et les informations de profil. Contient les identifiants, l'email (utilisé pour Gravatar), le mot de passe hashé et les rôles. Relations : un utilisateur peut créer plusieurs critiques et avoir plusieurs films en favoris.</p>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">🎬</div>
+                <div>
+                    <h3>Entité Film</h3>
+                    <p>Stocke les informations des films : titre, description, URL de l'affiche (récupérée via TMDB), date de sortie. Relations : un film peut avoir plusieurs critiques et être dans les favoris de plusieurs utilisateurs (relation Many-to-Many).</p>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">✍️</div>
+                <div>
+                    <h3>Entité Critique</h3>
+                    <p>Représente les avis utilisateurs avec le contenu textuel, la note attribuée (système d'étoiles), la date de publication. Relations : appartient à un utilisateur (auteur) et concerne un film spécifique. Protégée par des Voters pour la modification/suppression.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-block">
+        <h2>Défis techniques rencontrés</h2>
+        <div class="skills-list">
+            <div class="skill-item">
+                <div class="skill-icon">🔐</div>
+                <div>
+                    <h3>Authentification JWT avec cookies</h3>
+                    <p>La mise en place de l'authentification JWT a représenté un défi majeur, particulièrement la gestion sécurisée des tokens dans des cookies HttpOnly pour éviter les vulnérabilités XSS. Il a fallu configurer correctement les CORS pour permettre la communication entre le front-end et l'API tout en maintenant un niveau de sécurité élevé. La gestion du refresh des tokens et de l'expiration des sessions a nécessité une attention particulière.</p>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">🚀</div>
+                <div>
+                    <h3>Déploiement sur serveur hébergeur</h3>
+                    <p>Le déploiement de l'application sur le serveur de l'université a posé plusieurs challenges : configuration de l'environnement de production, gestion des variables d'environnement (clés API, secrets JWT), mise en place du HTTPS, et optimisation des performances. La séparation de l'API et du front-end sur des chemins différents du même serveur a nécessité une configuration Apache spécifique avec des règles de réécriture appropriées.</p>
                 </div>
             </div>
             <div class="skill-item">
                 <div class="skill-icon">🔄</div>
                 <div>
-                    <h3>Sprints et itérations</h3>
-                    <p>Organisation du travail en sprints de 2 semaines avec des objectifs clairs et des livrables réguliers. Adaptation continue selon les retours du client.</p>
-                </div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-icon">👥</div>
-                <div>
-                    <h3>Collaboration d'équipe</h3>
-                    <p>Daily stand-ups, sprint planning et retrospectives pour maintenir une communication fluide et une progression constante du projet.</p>
+                    <h3>Sérialisation complexe avec API Platform</h3>
+                    <p>La gestion de la sérialisation des entités avec leurs relations a demandé une compréhension approfondie des groupes de normalisation d'API Platform. Il fallait éviter les références circulaires (Film → Critiques → Film) tout en exposant suffisamment d'informations pour le front-end. La personnalisation des contextes de sérialisation selon les endpoints (liste vs détail) et l'optimisation des requêtes pour éviter le problème N+1 ont été des aspects cruciaux du développement.</p>
                 </div>
             </div>
         </div>
-
-        <img src="img/ctfd/chart.png" alt="Burndown chart" class="project-image" style="margin-top: 40px;">
-        <p class="image-caption">Burndown chart du 3ème rendu du projet</p>
     </div>
 
     <div class="section-block">
-        <h2>Plateforme CTFd</h2>
+        <h2>Travail en équipe</h2>
         <p style="font-size: 1.1rem; line-height: 1.8; color: var(--texte); margin-bottom: 30px;">
-            Pour réaliser ce projet, nous avons utilisé la plateforme CTFd car, en plus d'être open-source, c'est celle qui correspondait au mieux aux demandes du client. La personnalisation et l'extension de cette plateforme nous ont permis de créer une expérience unique adaptée aux besoins spécifiques de l'association Yggame.
+            Ce projet de groupe de 4 personnes m'a permis de découvrir la collaboration dans un contexte de développement full-stack. En tant que responsable principal de l'API, j'ai dû travailler en étroite coordination avec mes coéquipiers chargés du front-end pour définir les endpoints nécessaires, la structure des données échangées et les codes de statut HTTP appropriés.
         </p>
-
-        <img src="img/ctfd/accueil.png" alt="Interface CTFd" class="project-image">
-        <p class="image-caption">Interface d'accueil de la plateforme CTF</p>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--texte); margin-bottom: 30px;">
+            La répartition des tâches était claire : je me concentrais sur le back-end (architecture API, base de données, sécurité, intégrations externes) tandis que mes collègues développaient l'interface Vue.js et l'intégration avec l'API. Cette séparation nous a permis de travailler en parallèle tout en synchronisant régulièrement nos avancées.
+        </p>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--texte);">
+            Les points de synchronisation réguliers étaient essentiels pour s'assurer que les contrats d'API (format des requêtes/réponses) étaient respectés et que les fonctionnalités s'intégraient correctement. Cette expérience m'a appris l'importance d'une documentation claire de l'API et d'une communication efficace au sein d'une équipe de développement.
+        </p>
     </div>
 
     <div class="section-block">
         <h2>Compétences développées</h2>
         <div class="skills-list">
             <div class="skill-item">
-                <div class="skill-icon">🔐</div>
+                <div class="skill-icon">⚡</div>
                 <div>
-                    <h3>Sécurité et vulnérabilités</h3>
-                    <p>La création des défis nécessitant quelques bases en programmation, m'ont permis d'apprendre à mieux sécuriser mon code car le but des défis est de mettre en place une faille dans le code afin que les joueurs puissent "hacker" le défi.</p>
+                    <h3>Maîtrise d'API Platform</h3>
+                    <p>Découverte et apprentissage approfondi d'API Platform, un outil puissant pour créer rapidement des APIs REST/GraphQL conformes aux standards. Compréhension des concepts de ressources, d'operations, de filtres, de validation et de sérialisation. Cette expérience m'a montré comment créer des APIs professionnelles et documentées automatiquement avec Swagger/OpenAPI.</p>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">🔒</div>
+                <div>
+                    <h3>Gestion de l'authentification JWT</h3>
+                    <p>Apprentissage complet du système d'authentification par tokens JWT : génération des tokens, validation, refresh, gestion de l'expiration et stockage sécurisé dans des cookies HttpOnly. Compréhension des avantages du JWT pour les architectures découplées (stateless) et des bonnes pratiques de sécurité associées.</p>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">🎯</div>
+                <div>
+                    <h3>Développement Vue.js</h3>
+                    <p>Première expérience significative avec Vue.js en contexte de projet réel. Apprentissage de la réactivité de Vue, de la composition des composants, de la gestion d'état et de la communication avec une API REST. Découverte du système de routing pour créer une Single Page Application fluide et performante.</p>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">🛡️</div>
+                <div>
+                    <h3>Security Voters Symfony</h3>
+                    <p>Implémentation de la logique d'autorisation fine avec les Security Voters de Symfony. Apprentissage de la différence entre authentification (qui êtes-vous ?) et autorisation (que pouvez-vous faire ?). Création de règles métier complexes pour contrôler l'accès aux ressources selon le contexte et l'utilisateur.</p>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">🌐</div>
+                <div>
+                    <h3>Intégration d'APIs tierces</h3>
+                    <p>Expérience pratique d'intégration d'APIs externes (TMDB pour les films, Gravatar pour les avatars). Gestion des clés API, des limites de taux, de la mise en cache des réponses et du traitement des erreurs. Compréhension de l'importance de documenter et gérer proprement les dépendances externes.</p>
                 </div>
             </div>
             <div class="skill-item">
                 <div class="skill-icon">🤝</div>
                 <div>
-                    <h3>Travail d'équipe avancé</h3>
-                    <p>Grâce à la méthode Scrum, j'ai pu acquérir une autre façon de travailler en équipe et une amélioration quant à ma façon de communiquer avec les autres. Le rôle de Scrum Master m'a appris à faciliter la collaboration et résoudre les blocages.</p>
-                </div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-icon">🎓</div>
-                <div>
-                    <h3>Sensibilisation cyber</h3>
-                    <p>Apprentissage approfondi des différents domaines de la cybersécurité : vulnérabilités web, cryptographie, RGPD, réseaux, pour créer des défis pédagogiques et pertinents.</p>
+                    <h3>Collaboration front/back</h3>
+                    <p>Apprentissage du travail en équipe sur un projet full-stack avec séparation claire des responsabilités. Compréhension de l'importance des contrats d'API, de la documentation et de la communication entre développeurs front-end et back-end. Cette expérience m'a préparé aux pratiques professionnelles de développement en équipe.</p>
                 </div>
             </div>
         </div>
@@ -169,43 +265,149 @@
         <h2>Technologies utilisées</h2>
         <div class="tech-grid">
             <div class="tech-card">
-                <span class="tech-name">CTFd Platform</span>
-                <div class="tech-bar">
-                    <div class="tech-progress" style="width: 90%"></div>
-                </div>
-            </div>
-            <div class="tech-card">
-                <span class="tech-name">Docker</span>
+                <span class="tech-name">Symfony</span>
                 <div class="tech-bar">
                     <div class="tech-progress" style="width: 85%"></div>
                 </div>
             </div>
             <div class="tech-card">
-                <span class="tech-name">Python</span>
+                <span class="tech-name">API Platform</span>
                 <div class="tech-bar">
                     <div class="tech-progress" style="width: 80%"></div>
                 </div>
             </div>
             <div class="tech-card">
-                <span class="tech-name">Discord API</span>
+                <span class="tech-name">Vue.js</span>
                 <div class="tech-bar">
                     <div class="tech-progress" style="width: 75%"></div>
                 </div>
             </div>
             <div class="tech-card">
-                <span class="tech-name">Scrum / Agile</span>
+                <span class="tech-name">JWT Authentication</span>
+                <div class="tech-bar">
+                    <div class="tech-progress" style="width: 80%"></div>
+                </div>
+            </div>
+            <div class="tech-card">
+                <span class="tech-name">Doctrine ORM</span>
                 <div class="tech-bar">
                     <div class="tech-progress" style="width: 85%"></div>
                 </div>
             </div>
             <div class="tech-card">
-                <span class="tech-name">Cybersécurité</span>
+                <span class="tech-name">Security Voters</span>
+                <div class="tech-bar">
+                    <div class="tech-progress" style="width: 75%"></div>
+                </div>
+            </div>
+            <div class="tech-card">
+                <span class="tech-name">TMDB API</span>
                 <div class="tech-bar">
                     <div class="tech-progress" style="width: 80%"></div>
                 </div>
             </div>
+            <div class="tech-card">
+                <span class="tech-name">Gravatar API</span>
+                <div class="tech-bar">
+                    <div class="tech-progress" style="width: 70%"></div>
+                </div>
+            </div>
+            <div class="tech-card">
+                <span class="tech-name">REST API Design</span>
+                <div class="tech-bar">
+                    <div class="tech-progress" style="width: 85%"></div>
+                </div>
+            </div>
+            <div class="tech-card">
+                <span class="tech-name">Responsive Design</span>
+                <div class="tech-bar">
+                    <div class="tech-progress" style="width: 80%"></div>
+                </div>
+            </div>
+            <div class="tech-card">
+                <span class="tech-name">Validation & Serialization</span>
+                <div class="tech-bar">
+                    <div class="tech-progress" style="width: 80%"></div>
+                </div>
+            </div>
+            <div class="tech-card">
+                <span class="tech-name">Déploiement serveur</span>
+                <div class="tech-bar">
+                    <div class="tech-progress" style="width: 70%"></div>
+                </div>
+            </div>
         </div>
+    </div>
+
+    <div class="section-block">
+        <h2>Liens du projet</h2>
+        <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 30px;">
+            <a href="https://webinfo.iutmontp.univ-montp2.fr/~ourliacm/critiques_api/public/api"
+               target="_blank"
+               style="display: inline-flex; align-items: center; gap: 12px; padding: 18px 28px; background: linear-gradient(135deg, var(--accent-1), var(--accent-2)); color: var(--texte); text-decoration: none; border-radius: 15px; font-weight: 600; box-shadow: 0 4px 15px rgba(var(--accent-1-rgb), 0.3); transition: all 0.3s ease;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Documentation API
+            </a>
+            <a href="https://webinfo.iutmontp.univ-montp2.fr/~ourliacm/critiques_front/dist/"
+               target="_blank"
+               style="display: inline-flex; align-items: center; gap: 12px; padding: 18px 28px; background: linear-gradient(135deg, var(--accent-1), var(--accent-2)); color: var(--texte); text-decoration: none; border-radius: 15px; font-weight: 600; box-shadow: 0 4px 15px rgba(var(--accent-1-rgb), 0.3); transition: all 0.3s ease;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Voir le site en ligne
+            </a>
+        </div>
+    </div>
+
+    <div class="section-block">
+        <h2>Bilan et perspectives</h2>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--texte); margin-bottom: 30px;">
+            Ce projet m'a permis de découvrir l'écosystème Symfony moderne et les outils comme API Platform qui facilitent grandement le développement d'APIs REST professionnelles. L'apprentissage de Vue.js en parallèle m'a donné une vision complète du développement full-stack et de l'importance de bien concevoir les interfaces entre front-end et back-end.
+        </p>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--texte); margin-bottom: 30px;">
+            La gestion de l'authentification JWT a été particulièrement formatrice : j'ai compris les enjeux de sécurité liés aux applications web modernes et l'importance de suivre les bonnes pratiques (cookies HttpOnly, HTTPS, CORS correctement configuré). L'utilisation des Security Voters m'a montré comment implémenter une logique d'autorisation flexible et maintenable.
+        </p>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--texte);">
+            Le travail en équipe sur ce projet m'a préparé aux conditions réelles de développement en entreprise. J'ai appris à documenter mon API, à communiquer efficacement sur les besoins et contraintes techniques, et à coordonner mon travail avec celui de mes coéquipiers. Cette expérience a renforcé mon intérêt pour le développement back-end et l'architecture d'applications web modernes.
+        </p>
     </div>
 </div>
 </body>
+<footer class="project-footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Mathis OURLIAC</h3>
+            <p>Étudiant en Informatique</p>
+            <p>Agent technique chez E-MSN</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Navigation</h4>
+            <a href="../index.html">Accueil</a>
+            <a href="../index.html#parcours">Parcours</a>
+            <a href="../index.html#competences">Compétences</a>
+            <a href="../index.html#projets">Projets</a>
+            <a href="../index.html#contacts">Contact</a>
+        </div>
+
+        <div class="footer-section">
+            <h4>Liens</h4>
+            <a href="https://linkedin.com/in/mathis-ourliac-8a80372ab" target="_blank">LinkedIn</a>
+            <a href="https://github.com/Mathis4x3" target="_blank">Github</a>
+            <a href="./pdf/CV.pdf" download>Télécharger mon CV</a>
+        </div>
+
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <p>📧 ourliacmathis@gmail.com</p>
+            <p>📍 Montpellier, France</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 - 2026 Mathis OURLIAC - Tous droits réservés</p>
+    </div>
+</footer>
 </html>
