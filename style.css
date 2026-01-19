@@ -515,6 +515,53 @@ main{
                     }
                 }
             }
+            .about-text {
+                font-size: 1.1em;
+                line-height: 1.9;
+                color: var(--texte);
+                margin-bottom: 25px;
+                text-align: justify;
+
+                &:first-of-type {
+                    &::first-letter {
+                        font-size: 3.5rem;
+                        font-weight: 700;
+                        float: left;
+                        line-height: 0.9;
+                        margin: 8px 12px 0 0;
+                        background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                    }
+                }
+            }
+
+            .highlight {
+                background: linear-gradient(180deg, transparent 60%, rgba(var(--accent-1-rgb), 0.3) 60%);
+                padding: 0 3px;
+            }
+
+            @media (max-width: 1024px) {
+                .about-text {
+                    font-size: 1em;
+                    text-align: left;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .about-text {
+                    font-size: 0.95em;
+                    line-height: 1.7;
+
+                    &:first-of-type {
+                        &::first-letter {
+                            font-size: 2.5rem;
+                            margin: 5px 10px 0 0;
+                        }
+                    }
+                }
+            }
         }
 
         &#parcours {
